@@ -15,6 +15,11 @@ public class TestBase {
     String email = fakerEn.internet().emailAddress();
     String number = faker.phoneNumber().subscriberNumber(10);
     String address = faker.address().fullAddress();
+    String day = "26";
+    String month = "August";
+    String year = "1998";
+
+
 
 
     @BeforeAll
@@ -22,5 +27,6 @@ public class TestBase {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;
+
     }
 }

@@ -18,6 +18,12 @@ public class TestBase {
     String day = "26";
     String month = "August";
     String year = "1998";
+    String gender = "Male";
+    String subject = "Maths";
+    String hobbie = "Sports";
+    String state = "Haryana";
+    String city = "Karnal";
+    String imgPath = "img/test.jpg";
 
 
 

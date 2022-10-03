@@ -12,26 +12,25 @@ public class RegistationFormTest extends TestBase {
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setEmail(email)
-                .setGender("Male")
+                .setGender(gender)
                 .setNumber(number)
                 .setBirthDate(day, month, year)
-                .setSubject("Maths")
-                .setHobbies("Sports")
-                .setHobbies("Reading")
-                .setHobbies("Music").setPicture("img/test.jpg")
+                .setSubject(subject)
+                .setHobbies(hobbie)
+                .setPicture(imgPath)
                 .setAddress(address)
-                .setLocation("Haryana", "Karnal")
+                .setLocation(state, city)
                 .clickSubmit();
 
         registrationForm.checkResult("Student Name", (firstName + " " + lastName))
                 .checkResult("Student Email", email)
-                .checkResult("Gender", "Male")
+                .checkResult("Gender", gender)
                 .checkResult("Mobile", number)
                 .checkResult("Date of Birth", day + " " + month + "," + year)
-                .checkResult("Subjects", "Maths")
-                .checkResult("Hobbies", "Sports, Reading, Music")
+                .checkResult("Subjects", subject)
+                .checkResult("Hobbies", hobbie)
                 .checkResult("Picture", "test.jpg")
                 .checkResult("Address", address)
-                .checkResult("State and City", "Haryana Karnal");
+                .checkResult("State and City", state + " " + city);
     }
 }
